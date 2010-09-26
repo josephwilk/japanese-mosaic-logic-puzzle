@@ -15,11 +15,12 @@ Feature: Japanese Mosaic logic puzzle
     | | | |
     """
     When I run mosaic start_grid
-    Then the output should contain:
+    Then the output should contain exactly:
     """
     | | | |
     | | | |
-    | | | | 
+    | | | |
+    
     """
 
   Scenario: Corner cell
@@ -30,11 +31,12 @@ Feature: Japanese Mosaic logic puzzle
     | | | |
     """
     When I run mosaic start_grid
-    Then the output should contain:
+    Then the output should contain exactly:
     """
     |#|#| |
     |#|#| |
-    | | | | 
+    | | | |
+    
     """
 
   Scenario: Centre cell
@@ -43,13 +45,15 @@ Feature: Japanese Mosaic logic puzzle
     | | | |
     | |9| |
     | | | |
+    
     """
     When I run mosaic start_grid
-    Then the output should contain:
+    Then the output should contain exactly:
     """
-    |#|#|#| 
-    |#|#|#| 
-    |#|#|#| 
+    |#|#|#|
+    |#|#|#|
+    |#|#|#|
+    
     """
 
   Scenario: Side cell
@@ -60,11 +64,12 @@ Feature: Japanese Mosaic logic puzzle
     | | | |
     """
     When I run mosaic start_grid
-    Then the output should contain:
+    Then the output should contain exactly:
     """
-    |#|#| | 
-    |#|#| | 
-    |#|#| | 
+    |#|#| |
+    |#|#| |
+    |#|#| |
+    
     """
 
   Scenario: 0 overriding a numeric cell
@@ -75,11 +80,12 @@ Feature: Japanese Mosaic logic puzzle
     |0| | |
     """
     When I run mosaic start_grid
-    Then the output should contain:
+    Then the output should contain exactly:
     """
     | | |#|
     | | |#|
-    | | |#| 
+    | | |#|
+    
     """
 
   Scenario: 3x3 grid with multiple cells
@@ -90,11 +96,12 @@ Feature: Japanese Mosaic logic puzzle
     |2| |2|
     """
     When I run mosaic start_grid
-    Then the output should contain:
+    Then the output should contain exactly:
     """
     | |#| |
     |#| |#|
     | |#| |
+    
     """
 
   Scenario: Easy 5x5 grid
@@ -104,16 +111,17 @@ Feature: Japanese Mosaic logic puzzle
     | |9| | | |
     | |8|8| | |
     | | | | |4|
-    |4| |5| |2|     
+    |4| |5| |2|
     """
     When I run mosaic start_grid
-    Then the output should contain:
+    Then the output should contain exactly:
     """
-    |#|#|#| | | 
-    |#|#|#|#| | 
-    |#|#|#|#|#| 
-    |#|#| |#| | 
-    |#|#|#|#| | 
+    |#|#|#| | |
+    |#|#|#|#| |
+    |#|#|#|#|#|
+    |#|#| |#| |
+    |#|#|#|#| |
+    
     """
 
   Scenario: Hard 5x5 grid
@@ -123,14 +131,15 @@ Feature: Japanese Mosaic logic puzzle
     | |4| |6| |
     |3| |7|6| |
     | |6| |6|5|
-    | | | | |3|     
+    | | | | |3|
     """
     When I run mosaic start_grid
-    Then the output should contain:
+    Then the output should contain exactly:
     """
     | | |#|#| |
     | | |#|#| |
     |#|#| |#|#|
     | |#|#|#| |
     |#|#| |#|#|
+    
     """
