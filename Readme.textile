@@ -1,0 +1,50 @@
+h2. Japanese Mosaic Logic Puzzle
+
+For rules and examples of the Japanese Mosaic problem you should take a look at the Cucumber acceptance tests.
+
+"features/mosaic.feature":http://github.com/josephwilk/japanese-mosaic-logic-puzzle/blob/master/features/mosaic.feature
+
+If you're not sure what Cucumber is take a quick peek here "http://cukes.info/":http://cukes.info/
+
+We will use these Examples to drive the development of your solution.
+
+h2. 1  Prerequisites
+
+You can use any language you want to solve this puzzle but the acceptance tests are run with Ruby and Cucumber.
+
+So we need the following installed:
+
+# Git
+# Ruby (or JRuby whatever floats your boat)
+# Rubygems (http://rubygems.org/pages/download)
+
+h2. 2  Setup
+
+# gem install bundler
+# git clone git://github.com/josephwilk/japanese-mosaic-logic-puzzle.git
+# cd japanese-mosaic-logic-puzzle && bundle install
+
+We can now run that Cucumber specification:
+
+<pre><code>cucumber features/mosaic.feature</code></pre>
+
+You should be greeted with lots of fails. Right here the work starts, work your way down the scenarios getting each to pass in turn. 
+
+h2. 3 Coding
+
+You can use whatever language you want to solve the puzzle. All that matters is you ensure executing the "bin/mosaic" prints the solution on the command line.
+
+The file "bin/mosaic" will be executed with a filename which will contain the input string.
+
+h2. 4 Example
+
+So if we were going to solve the problem in Ruby we would add a shebang to the bin/mosaic file:
+
+<pre><code>#!/usr/bin/env ruby
+filename = ARGV[0] # The first argument is the filename with the input table string
+File.open(filename) do |f|
+  string_input_table = f.read
+  input_array = string_input_table.split("\n").map{|row| row.split("|")[1..-1]}
+end
+
+puts "I should output the solution here."</code></pre>
