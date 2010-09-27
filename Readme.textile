@@ -14,14 +14,15 @@ You can use any language you want to solve this puzzle but the acceptance tests 
 
 So we need the following installed:
 
-# Git
+# Git (and a github account: "http://github.com":http://github.com/)
 # Ruby (or JRuby whatever floats your boat)
-# Rubygems (http://rubygems.org/pages/download)
+# Rubygems ("http://rubygems.org/pages/download":http://rubygems.org/pages/download)
 
 h2. 2  Setup
 
+# Fork my repository on Github ("http://github.com/josephwilk/japanese-mosaic-logic-puzzle":http://github.com/josephwilk/japanese-mosaic-logic-puzzle)
+# git clone your repository
 # gem install bundler
-# git clone git://github.com/josephwilk/japanese-mosaic-logic-puzzle.git
 # cd japanese-mosaic-logic-puzzle && bundle install
 
 We can now run that Cucumber specification:
@@ -32,7 +33,7 @@ You should be greeted with lots of fails. Right here the work starts, work your 
 
 h2. 3 Coding
 
-You can use whatever language you want to solve the puzzle. All that matters is you ensure executing the "bin/mosaic" prints the solution on the command line.
+You can use whatever language you want to solve the puzzle. All that matters is you ensure executing "bin/mosaic" prints the solution on the command line.
 
 The file "bin/mosaic" will be executed with a filename which will contain the input string.
 
