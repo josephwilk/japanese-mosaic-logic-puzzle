@@ -72,7 +72,7 @@ Feature: Japanese Mosaic logic puzzle
     
     """
 
-  Scenario: 0 overriding a numeric cell
+  Scenario: 0 constraint meaning no neighbours or the cell itself should be filled in. 0s take precedent over any other constraints.
     Given a file named "start_grid" with:
     """
     |0| | |
@@ -91,9 +91,9 @@ Feature: Japanese Mosaic logic puzzle
   Scenario: 3x3 grid with multiple cells
     Given a file named "start_grid" with:
     """
-    |2| |2|
-    | |4| |
-    |2| |2|
+    |2|3|2|
+    |3|4|3|
+    |2|3|2|
     """
     When I run mosaic start_grid
     Then the output should contain exactly:
