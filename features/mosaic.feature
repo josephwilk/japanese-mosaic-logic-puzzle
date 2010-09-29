@@ -3,8 +3,12 @@ Feature: Japanese Mosaic logic puzzle
   The Japanese Mosaic logic puzzle is a derivative of the Nonogram puzzle form invented by 
   Tetsuya Nishio.
   It consists of a grid with the cells containing either the numbers 0 to 9 or nothing.
-  The number in a cell tells you how many of itself and its neighbours are filled in. 
+  The number in a cell tells you how many of itself and its neighbours are filled in.
   For our consideration we shall consider a filled in cell one with a # in it.
+  
+  A 0 in a cell means that none of the neighbour cells or itself can be filled in.
+  If a 0 constraint contradicts another constraint the 0 constraint always takes priority.
+  
   The puzzle is complete when you have filled in all the squares that the constraints allow.
 
   Scenario: Empty grid
@@ -72,7 +76,7 @@ Feature: Japanese Mosaic logic puzzle
     
     """
 
-  Scenario: 0 constraint meaning no neighbours or the cell itself should be filled in. 0s take precedent over any other constraints.
+  Scenario: '0' constraint cancelling out a '2' constraint
     Given a file named "start_grid" with:
     """
     |0| | |
