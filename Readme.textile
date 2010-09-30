@@ -10,7 +10,7 @@ We will use these Examples to drive the development of your solution.
 
 h2. 1  Prerequisites
 
-You can use any language you want to solve this puzzle but the acceptance tests are run with Ruby and Cucumber.
+The acceptance tests for these examples require Ruby and Cucumber.
 
 So we need the following installed:
 
@@ -33,7 +33,7 @@ You should be greeted with lots of fails. Right here the work starts, work your 
 
 h2. 3 Coding
 
-You can use whatever language you want to solve the puzzle. All that matters is you ensure executing "bin/mosaic" prints the solution on the command line.
+You have to ensure that executing "bin/mosaic" prints the solution on the command line.
 
 The file "bin/mosaic" will be executed with a filename which will contain the input string.
 
