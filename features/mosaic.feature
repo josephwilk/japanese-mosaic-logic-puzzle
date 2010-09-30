@@ -135,7 +135,7 @@ Feature: Japanese Mosaic logic puzzle
     | |4| |6| |
     |3| |7|6| |
     | |6| |6|5|
-    | | | | |3|
+    |3| | | |3|
     """
     When I run mosaic start_grid
     Then the output should contain exactly:
