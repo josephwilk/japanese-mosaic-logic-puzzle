@@ -37,10 +37,9 @@ You have to ensure that executing "bin/mosaic" prints the solution on the comman
 
 The file "bin/mosaic" will be executed with a filename which will contain the input string.
 
-h2. 4 Example
+h2. 4 First steps
 
-So if we were going to solve the problem in Ruby we would add a shebang to the bin/mosaic file:
-
+bin/mosaic file:
 <pre><code>#!/usr/bin/env ruby
 filename = ARGV[0] # The first argument is the filename with the input table string
 File.open(filename) do |f|
